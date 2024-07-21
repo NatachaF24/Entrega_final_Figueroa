@@ -1,0 +1,19 @@
+{% extends "repositorio/index.html" %}
+
+
+{% block titulo %}
+<h1 class="mb-5">Buscar Complejos</h1>                                
+{% endblock titulo %}
+
+
+{% block contenido %}   
+
+<form action="{% url 'encontrarComplejos' %}" method="get">
+    {% csrf_token %}
+    <table>
+        <p>Ingrese nombre del Complejo: <input type="text" name="buscar" id="buscar"></p>
+    </table>
+    <input type="submit" value="Buscar">
+</form>
+
+{% endblock contenido %}

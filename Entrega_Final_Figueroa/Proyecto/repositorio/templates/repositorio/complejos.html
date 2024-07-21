@@ -1,0 +1,31 @@
+{% extends "repositorio/index.html" %}
+
+
+{% block titulo %}
+<h1 class="mb-5">Complejos</h1>
+<h2 class="mb-5">Encontranos cerca de donde estas</h2>                                
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Complejo</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in complejos  %}
+        <tr>
+            <td>{{ c.complejo }}</td>
+            <td>{{ c.direccion }}</td>
+            <td>{{ c.telefono }}</td>
+            <td>     
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
